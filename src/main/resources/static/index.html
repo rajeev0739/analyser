@@ -1,0 +1,75 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+function loadData(url) {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("demo").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", url, true);
+	  xhttp.send();
+	  alert("SUCCESS")
+	}
+/* function loadTreandData() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("demo").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "../trendData", true);
+	  xhttp.send();
+	}
+function classifyData() {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	     document.getElementById("demo").innerHTML = this.responseText;
+	    }
+	  };
+	  xhttp.open("GET", "../classifyData", true);
+	  xhttp.send();
+	} */
+</script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+ <div class="container">
+ <div class="row">
+      <h2 style="text-align:center">VIU Customer Sentiment Analysis</h2>
+    
+  <div class="cg-page-header-logo">
+    <img src="vuclip_logo_new.png" alt="vuclip Logo"  align="right">  </div>
+
+ </div>
+    
+  <div class="col">
+      </br></br></br>
+      <!-- <a href="../languageTranslation" class="lT btn">
+          <i class="fa fa-facebook fa-fw"></i> Click here to Translate Data to English
+         </a>
+        <a href="../trendData" class="tD btn">
+          <i class="fa fa-facebook fa-fw"></i>Click here to Trend the Data 
+         </a>
+        <a href="../classifyData" class="cD btn">
+          <i class="fa fa-twitter fa-fw"></i>Click here to Classify the Data
+        </a> </br></br></br>
+        <input type="submit" value="View Graph on elk KIBANA" onclick="window.open('http://google.com')">
+         <input type="button" value="click here"> -->
+         <div id="demo">
+         <button class="tD btn" onclick="loadData('../languageTranslation')">Click here to Translate Data to English</button>
+         <button class="tD btn" onclick="loadData('../trendData')">Click here to Trend the Data</button>
+         <button class="tD btn" onclick="loadData('../classifyData')">Click here to Classify the Data</button>
+         <button class="tD btn" onclick="loadData('../pushToKibana')">Click here to push Data On Kibana</button>
+         </div>
+         <input type="submit" value="View Graph on elk KIBANA" onclick="window.open('http://google.com')">
+         
+  </div>
+ 
+ <img src="Words.png" alt="Smiley face"  align="right">
+  
+  <div class="footer">
+   <h2 style="text-align:center">Team Pioneers</h2>
+</div>
